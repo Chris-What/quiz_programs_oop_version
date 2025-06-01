@@ -19,6 +19,9 @@ def dict(self):
 class QuizCreator:
     def __init__(self, filename="quiz_questions.json"):
 #4. initialize a storage for quiz data and the output filename
+        self.filename = filename
+        self.quiz_data = []
+
 #5. display welcome message to user when starting program
 #6. collect the question, choices, and the correct answer
 #7. validate the correct answer input
