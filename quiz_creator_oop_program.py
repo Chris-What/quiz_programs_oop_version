@@ -46,6 +46,14 @@ class QuizCreator:
         return Question(prompt, choices, correct_answer)
 
 #8. ask the user if they want to enter another question
+    def ask_to_continue(self):
+        while True:
+            choice = input("Do you want to enter another quiz question? (yes/no): ").lower()
+            if choice in ["yes", "no"]:
+                return choice == "yes"
+            else:
+                print('invalid choice; please choose between "yes" or "no".')
+
 #9. save all collected questions to a json file
 #10. display message when finishing program
 #11. run the full program
