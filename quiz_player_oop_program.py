@@ -11,6 +11,7 @@ class QuizQuestion:
         self.choices = choices
         self.correct_answer = correct_answer
 
+    @classmethod
     def from_dict(cls, data):
         return cls(data["question"], data["choices"], data["correct_answer"])
 
@@ -78,8 +79,12 @@ class QuizPlayer:
 
 #7. create a main entry point to run the program
     def run(self):
-        self.display_welcome_message()
+        self.welcome_message()
         self.load_questions()
         self.play_quiz()
-        self.display_exit_message()
+        self.exit_message()
+
 #8. launch the program
+if __name__ == "__main__":
+    player = QuizPlayer()
+    player.run()
