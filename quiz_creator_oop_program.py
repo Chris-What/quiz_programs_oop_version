@@ -57,11 +57,11 @@ class QuizCreator:
 #9. save all collected questions to a json file
     def save_to_file(self):
         with open(self.filename, "w") as file:
-            json.dump([question.to_dict() for question in self.quiz_data], file, indent=4)
+            json.dump([question.dict() for question in self.quiz_data], file, indent=4)
 
 #10. display message when finishing program
     def exit_message(self):
-        print("Thank you for using the Quiz Creator! All quiz questions, choices, and correct answers have been saved to" + self.filename + "!")
+        print("Thank you for using the Quiz Creator! All quiz questions, choices, and correct answers have been saved to " + self.filename + "!")
 
 #11. run the full program
     def run(self):
@@ -75,3 +75,6 @@ class QuizCreator:
         self.exit_message()
 
 #12. start the program by creating an intance of the quiz creator class and running it
+if __name__ == "__main__":
+    creator = QuizCreator()
+    creator.run()
