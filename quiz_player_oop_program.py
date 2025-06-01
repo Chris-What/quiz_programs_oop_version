@@ -31,6 +31,10 @@ class QuizPlayer:
             exit()
 
 #3. display welcome message
+    def welcome_message(self):
+        print(Fore.CYAN + Style.BRIGHT + "/nThink ya got the smarts? Then try this out! WELCOME to the QUIZ PLAYER!!")
+        print(Fore.YELLOW + "Answer questions made from the Quiz Creator program, and test your brain!")
+
 #4. shuffle the questions and start the quiz
 #5. display the final score
 #6. display exit message
