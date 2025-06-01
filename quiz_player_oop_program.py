@@ -77,4 +77,9 @@ class QuizPlayer:
         print(Fore.CYAN + Style.BRIGHT + "\nNo matter if your score is low or high, what matters is that we learn, and have fun while doing so! Thank you, dear user, for answering this quiz in the QUIZ PLAYER PROGRAM!!!")
 
 #7. create a main entry point to run the program
+    def run(self):
+        self.display_welcome_message()
+        self.load_questions()
+        self.play_quiz()
+        self.display_exit_message()
 #8. launch the program
