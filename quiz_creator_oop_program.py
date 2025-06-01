@@ -8,12 +8,12 @@ class Question:
         self.correct_answer = correct_answer
 
 #2. convert the question to a dictionary for json
-def dict(self):
-    return {
-        "question": self.prompt,
-        "choices": self.choices,
-        "correct_answer": self.correct_answer
-    }
+    def dict(self):
+        return {
+            "question": self.prompt,
+            "choices": self.choices,
+            "correct_answer": self.correct_answer
+        }
 
 #3. define class that manages the quiz creation process
 class QuizCreator:
@@ -23,6 +23,9 @@ class QuizCreator:
         self.quiz_data = []
 
 #5. display welcome message to user when starting program
+    def display_welcome_message(self):
+        print("Welcome to Quiz Creator! This program allows you to create questions to be used in a quiz. To start, enter a question below.")
+
 #6. collect the question, choices, and the correct answer
 #7. validate the correct answer input
 #8. ask the user if they want to enter another question
