@@ -55,6 +55,10 @@ class QuizCreator:
                 print('invalid choice; please choose between "yes" or "no".')
 
 #9. save all collected questions to a json file
+    def save_to_file(self):
+        with open(self.filename, "w") as file:
+            json.dump([question.to_dict() for question in self.quiz_data], file, indent=4)
+
 #10. display message when finishing program
 #11. run the full program
 #12. start the program by creating an intance of the quiz creator class and running it
