@@ -16,6 +16,8 @@ def dict(self):
     }
 
 #3. define class that manages the quiz creation process
+class QuizCreator:
+    def __init__(self, filename="quiz_questions.json"):
 #4. initialize a storage for quiz data and the output filename
 #5. display welcome message to user when starting program
 #6. collect the question, choices, and the correct answer
