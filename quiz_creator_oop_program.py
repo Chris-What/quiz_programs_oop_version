@@ -37,6 +37,14 @@ class QuizCreator:
         }
 
 #7. validate the correct answer input
+        correct_answer = ""
+        while correct_answer not in choices:
+            correct_answer = input("Which choice is the correct answer? (A/B/C/D): ").upper()
+            if correct_answer not in choices:
+                print("Invalid choice; please choose between A, B, C, or D.")
+
+        return Question(prompt, choices, correct_answer)
+
 #8. ask the user if they want to enter another question
 #9. save all collected questions to a json file
 #10. display message when finishing program
