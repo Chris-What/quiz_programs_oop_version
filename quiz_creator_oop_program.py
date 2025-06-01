@@ -27,6 +27,15 @@ class QuizCreator:
         print("Welcome to Quiz Creator! This program allows you to create questions to be used in a quiz. To start, enter a question below.")
 
 #6. collect the question, choices, and the correct answer
+    def get_question_input(self):
+        prompt = input("Enter a question for the quiz: ")
+        choices = {
+            "A": input("Enter choice A: "),
+            "B": input("Enter choice B: "),
+            "C": input("Enter choice C: "),
+            "D": input("Enter choice D: "),
+        }
+
 #7. validate the correct answer input
 #8. ask the user if they want to enter another question
 #9. save all collected questions to a json file
