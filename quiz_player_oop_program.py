@@ -2,7 +2,7 @@ import json
 import random
 from colorama import init, Fore, Style
 
-#1. initialize colorama
+#1. initialize colorama, quiz questions, and score
 init(autoreset=True)
 
 class QuizQuestion:
@@ -21,6 +21,15 @@ class QuizPlayer:
         self.score = 0
 
 #2. load questions from quiz_questions.json
+    def load_questions(self):
+        try:
+            with open(self.filename, "r") as file:
+                data = json.load(file)
+                self.questions = [QuizQuestion.from_dict(item) for item in data]
+        except FileNotFoundError:
+            print(Fore.RED + "Hmm... There's no quiz file, yet. Try using the Quiz Creator program first in order to use this one!")
+            exit()
+
 #3. display welcome message
 #4. shuffle the questions and start the quiz
 #5. display the final score
