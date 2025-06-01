@@ -57,6 +57,21 @@ class QuizPlayer:
         self.display_score(total)
 
 #5. display the final score
+    def display_score(self, total):
+        print(Fore.BLUE + "\nMade it to the end! Hardly broke a sweat? Or were tears running down your face? Let's find out if you aced this quiz!")
+        print(Fore.YELLOW + f"Drumroll please! *krrrr....*\nYour score is.... {self.score} out of {total}!")
+
+        percent = (self.score / total) * 100
+
+        if percent == 100:
+            print(Fore.GREEN + Style.BRIGHT + "Are you Albert Einstein or something?? You're a GENIUS!!!")
+        elif percent >= 75:
+            print(Fore.GREEN + "Ya got a bright future ahead of ya, kid. One day, you might be in the history books!")
+        elif percent >= 50:
+            print(Fore.YELLOW + "Not bad! Keep working and you'll be better in no time!")
+        else:
+            print(Fore.RED + "Oh... Don't worry, we all have those moments. Just keep trying and you'll get there!")
+
 #6. display exit message
 #7. create a main entry point to run the program
 #8. launch the program
