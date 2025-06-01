@@ -36,6 +36,26 @@ class QuizPlayer:
         print(Fore.YELLOW + "Answer questions made from the Quiz Creator program, and test your brain!")
 
 #4. shuffle the questions and start the quiz
+    def play_quiz(self):
+        random.shuffle(self.questions)
+        total = len(self.questions)
+
+        for number, question in enumerate(self.questions, start=1):
+            print(Fore.MAGENTA + f'\nQuestion number {number}: {question.prompt}')
+            for letter, choice in question.choices.items():
+                print(f"    {letter}) {choice}")
+
+            user_answer = input(Fore.CYAN + "What'll it be? A, B, C, or D?: ").strip().upper()
+
+            if user_answer == question.correct_answer:
+                print(Fore.GREEN + "DING DING DING!!! We got a smarty-pants here!")
+                self.score += 1
+            else:
+                correct = question.correct_answer
+                print(Fore.RED + f'Not quite! The correct answer is {correct}: {question.choices[correct]}')
+
+        self.display_score(total)
+
 #5. display the final score
 #6. display exit message
 #7. create a main entry point to run the program
