@@ -74,7 +74,7 @@ class QuizCreator:
         self.save_to_file()
         self.exit_message()
 
-#12. start the program by creating an intance of the quiz creator class and running it
+#12. start the program by creating an instance of the quiz creator class and running it
 if __name__ == "__main__":
     creator = QuizCreator()
     creator.run()
