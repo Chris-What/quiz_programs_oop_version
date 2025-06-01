@@ -8,6 +8,13 @@ class Question:
         self.correct_answer = correct_answer
 
 #2. convert the question to a dictionary for json
+def dict(self):
+    return {
+        "question": self.prompt,
+        "choices": self.choices,
+        "correct_answer": self.correct_answer
+    }
+
 #3. define class that manages the quiz creation process
 #4. initialize a storage for quiz data and the output filename
 #5. display welcome message to user when starting program
